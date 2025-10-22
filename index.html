@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nou-Nouilles</title>
+
+    <!-- Google Fonts ------------------------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS ------------------------------------------------- -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="dFlexCenter">
+        <div id="menuBar">
+            <p class="bar">Section 1</p>
+            <p class="bar">Section 2</p>
+            <p class="bar">Section 3</p>
+            <p class="bar">Section 4</p>
+            <p class="bar">Section 5</p>
+        </div>
+    </header>
+
+    <!-- Popup ----------------------------------------------------------- -->
+
+    <div id="popup" class="dFlexCenter"></div>
+
+    <!-- Sections -------------------------------------------------------- -->
+
+    <!-- Section 1 ------------------------------------------ -->
+
+    <section id="section1" class="h100">
+        <img id="logo" src="assets/img/logo.png" alt="Logo NOOODLES">
+        <div id="divL" class="dFlexCenter h100">
+            <p>Nées dans les ruelles d’Asie, façonnées à la main,<br>
+                les nouilles chinoises ont voyagé à travers le temps, les peuples et les bols.<br><br>
+
+                De la farine et de l’eau, simples mais puissantes, elles sont devenues le cœur d’une cuisine vivante.<br><br>
+
+                Chaque bouillon porte un souvenir, chaque nouille une histoire.<br>
+                Derrière leur simplicité se cache un monde de gestes, de sons et d’odeurs.<br><br>
+
+                Goûter une nouille, c’est remonter le fil du temps —<br>
+                jusqu’à la première main qui l’a façonnée.</p>
+            <img id="arrows" src="assets/img/arrows.png" alt="Arrows">
+        </div>
+        <div id="divR">
+            <img id="s1_img" src="assets/img/noodles.jpg" alt="Nouilles">
+        </div>
+    </section>
+
+    <!-- Section 2 ----------------------------------------- -->
+
+    <section id="section2" class="dFlexCenter h100">
+        <div id="nouilles"></div>
+    </section>
+
+    <!-- Section 3 ----------------------------------------- -->
+
+    <section id="section3" class=" h100">
+        <div class="bowl"></div>
+        <div class="bowl"></div>
+        <div class="bowl"></div>
+        <div class="bowl"></div>
+    </section>
+
+    <!-- Section 4 ----------------------------------------- -->
+    
+    <section id="section4" class="dFlexCenter h100">
+        <div id="drag"></div>
+        <div id="depositZone"></div>
+    </section>
+
+    <!-- Section 5 ----------------------------------------- -->
+
+    <section id="section5" class="dFlexCenter h100"></section>
+
+    <!-- GSAP Scripts ---------------------------------------------------- -->
+    <script src="js/GSAP/gsap.min.js"></script>
+
+    <!-- -->
+    <script src="js/GSAP/Draggable.min.js"></script>
+    <script src="js/GSAP/MotionPathPlugin.min.js"></script>
+    <script src="js/GSAP/ScrollToPlugin.min.js"></script>
+    <script src="js/GSAP/ScrollTrigger.min.js"></script>
+
+    <!-- Main Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

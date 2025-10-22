@@ -1,0 +1,217 @@
+/* General Design --------------------------------- */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/* Variables -------------------------------------- */
+
+
+/* Fonts ------------------------------------------
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+*/
+
+/* Components --------------------------------------*/
+
+.dFlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h100 {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* Homepage Design -------------------------------- */
+
+/* Header ----------------------------- */
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(55, 103, 103, 0.1);
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.2);
+
+    position: fixed;
+    z-index: 10;
+}
+
+#menuBar {
+    width: 40%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.bar {
+    padding: 12px 15px;
+    background-color: rgb(235, 191, 55, 1);
+    border-radius: 20px;
+
+    font-size: 16px;
+}
+
+
+/*
+#popup {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.1 s;
+}
+*/
+
+/* Section 1 ----------------------------- */
+
+
+#section1 {
+    display: flex;
+    justify-content: start;
+
+    background-image: url(assets/img/nouilles2ps.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#logo {
+    width: 400px;
+    height: 300px;
+
+    position: fixed;
+    transform: translate(340px, 50px);
+    z-index: 9;
+
+}
+
+#divL {
+    background-color: rgb(167, 97, 97);
+    width: 60%;
+
+
+}
+
+
+#block {
+    width: 100px;
+    height: 100px;
+
+    background-color: green;
+    transition: transform 0.3s ease;
+
+}
+
+#block:hover {
+    transform: scale(1.2);
+}
+
+
+#divR {
+    display: none;
+    width: 40%;
+}
+
+#s1_img {
+    min-height: 100vh;
+
+
+    width: 100%;
+
+}
+
+#arrows {
+    transform: translateX(900px);
+    scale: 0.7;
+    opacity: 0;
+}
+
+/* Section 2 ----------------------------- */
+
+#section2 {
+    background-color: #610404;
+}
+
+/* Section 3 ----------------------------- */
+
+#section3 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #193159;
+}
+
+.bowl {
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+
+    margin: 10px;
+}
+
+/* Section 4 ----------------------------- */
+
+#section4 {
+    background-color: #58185b;
+}
+
+#depositZone {
+    width: 300px;
+    height: 300px;
+
+    border: 4px dotted black;
+}
+
+#depositZone--validate {
+    width: 300px;
+    height: 300px;
+
+    background-color: #307213;
+}
+
+
+/* Section 5 ----------------------------- */
+
+#section5 {
+    background-color: #307213;
+}
+
+
+
+
+
+#nouilles {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+
+#drag {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+/* Responsive ------------------------------------- */
+/* Animations ------------------------------------- */
