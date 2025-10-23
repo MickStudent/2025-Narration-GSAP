@@ -148,8 +148,64 @@ header {
 /* Section 2 ----------------------------- */
 
 #section2 {
-    background-color: #610404;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(204, 170, 117);
 }
+
+.blockText {
+    width: 300px;
+    background-color: aquamarine;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pin {
+    width: 40px;
+    height: 40px;
+
+    padding-top: 10px;
+}
+
+.regionTitle {}
+
+.text {
+    font-size: 14px;
+}
+
+#s2divL {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 30%;
+    background-color: aliceblue;
+}
+
+#s2divR {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 30%;
+    background-color: aliceblue;
+}
+
+
+#china {
+    width: 500px;
+    height: 500px;
+
+    filter: drop-shadow(15px 30px 6px rgba(0, 0, 0, 0.4));
+}
+
 
 /* Section 3 ----------------------------- */
 
@@ -157,8 +213,30 @@ header {
     display: flex;
     justify-content: start;
     align-items: center;
+
     background-color: #193159;
 }
+
+#plate1 {
+    width: 300px;
+}
+
+#plate2 {
+    width: 250px;
+}
+
+#plate3 {
+    width: 450px;
+}
+
+#plate4 {
+    width: 350px;
+}
+
+#plate5 {
+    width: 38gi0px;
+}
+
 
 .bowl {
     width: 100px;
@@ -197,16 +275,6 @@ header {
 }
 
 
-
-
-
-#nouilles {
-    width: 200px;
-    height: 200px;
-    background-color: blue;
-}
-
-
 #drag {
     width: 200px;
     height: 200px;
@@ -214,4 +282,55 @@ header {
 }
 
 /* Responsive ------------------------------------- */
+
+/* Media Queries ----------------- */
+
+@media (max-width: 799px) {}
+
 /* Animations ------------------------------------- */
+
+@keyframes Apparition {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

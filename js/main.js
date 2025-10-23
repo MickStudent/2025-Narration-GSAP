@@ -53,7 +53,7 @@ function demarageJeu() {
 }
 */
 
-gsap.from('#nouilles', {
+gsap.from('#china', {
     scrollTrigger:{
         trigger:"#section2",
         //markers: true,
@@ -140,15 +140,9 @@ gsap.to(divL, {
 })
 
 
-/*
-if (arrows != active) {
-    img.addEventListener("mouseenter", () => {
-    gsap.to(arrows, { opacity: 1, duration: 0.3 });
-});
-}
-*/
 
-/* GSAP Animation - Section 1 - Nouilles ---------------------------------------------- */
+/** GSAP Animation - Section 1 - Nouilles ---------------------------------------------- */
+
 
 let tl = gsap.timeline({
     /*
@@ -208,14 +202,13 @@ Draggable.create("#drag", {
     },
 
     onDragEnd: function(){
-        gsap.to("#drag", {
+        gsap.to("#depositZone", {
             witdh: '100px',
             filter: 'drop-shadow()30px 10px 4px rgba(0,0,0,0))',
             duration: 0.25,
         })
 
         /* Zone de dépot */
-
         if (this.hitTest("#depositZone", "40px")) {
             document.getElementById("depositZone").classList.add("#depositZone--validate")
         } else {
