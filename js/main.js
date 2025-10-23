@@ -53,18 +53,6 @@ function demarageJeu() {
 }
 */
 
-gsap.from('#china', {
-    scrollTrigger:{
-        trigger:"#section2",
-        //markers: true,
-        start:'top 60%',
-        end: 'top 20%',
-        toggleActions: 'play none reverse reset',
-        scrub: 1,
-    },
-    x:'-100vw',
-    duration: 2,
-})
 
 /** GSAP Animation - Popup - Nouilles */
 
@@ -77,7 +65,7 @@ gsap.to('#popup', {
     duration: 1.5,
 })
 
-/** GSAP Animation - Logo - Nouilles */
+/** GSAP Animation - Section 1 - Logo (ScrollTrigger)  */
 
 gsap.to('#logo', {
     scrollTrigger:{
@@ -94,7 +82,7 @@ gsap.to('#logo', {
     duration: 2,
 })
 
-/** GSAP Animation - DivL - Nouilles */
+/** GSAP Animation - Section 1 - Arrows  */
 
 const arrows = document.getElementById("arrows");
 const img = document.getElementById("section1");
@@ -127,6 +115,8 @@ arrows.addEventListener("click", () => {
     });
 })
 
+/** GSAP Animation - Section 1 - DivL comeback  */
+
 gsap.to(divL, {
     scrollTrigger:{
         trigger:"#section2",
@@ -139,9 +129,83 @@ gsap.to(divL, {
     opacity: 1,     
 })
 
+/** GSAP Animation - Section 2 - China(ScrollTrigger)  */
 
 
-/** GSAP Animation - Section 1 - Nouilles ---------------------------------------------- */
+gsap.from('#china', {
+    scrollTrigger:{
+        trigger:"#section2",
+        //markers: true,
+        start:'top 60%',
+        end: 'top 20%',
+        toggleActions: 'play none reverse reset',
+        scrub: 1,
+    },
+    x:'-100vw',
+    duration: 2,
+})
+
+/** JS Interaction - Section 2 - blockText */
+
+const blockText1 = document.getElementById("blockText1");
+const blockText2 = document.getElementById("blockText2");
+const blockText3 = document.getElementById("blockText3");
+const blockText4 = document.getElementById("blockText4");
+const blockText5 = document.getElementById("blockText5");
+const blockText6 = document.getElementById("blockText6");
+
+blockText1.addEventListener("mouseenter", () => {
+    blockText1.style.transform = "translateY(-20px)";
+});
+
+blockText1.addEventListener("mouseleave", () => {
+    blockText1.style.transform = "translateX(200px)";
+});
+
+blockText2.addEventListener("mouseenter", () => {
+    blockText2.style.transform = "translateX(-50px)";
+});
+
+blockText2.addEventListener("mouseleave", () => {
+    blockText2.style.transform = "translateX(0)";
+});
+
+blockText3.addEventListener("mouseenter", () => {
+    blockText3.style.transform = "translateY(20px)";
+});
+
+blockText3.addEventListener("mouseleave", () => {
+    blockText3.style.transform = "translateX(200px)";
+});
+
+blockText4.addEventListener("mouseenter", () => {
+    blockText4.style.transform = "translateY(-20px)";
+});
+
+blockText4.addEventListener("mouseleave", () => {
+    blockText4.style.transform = "translateX(-200px)";
+});
+
+blockText5.addEventListener("mouseenter", () => {
+    blockText5.style.transform = "translateX(50px)";
+});
+
+blockText5.addEventListener("mouseleave", () => {
+    blockText5.style.transform = "translateX(0)";
+});
+
+blockText6.addEventListener("mouseenter", () => {
+    blockText6.style.transform = "translateY(20px)";
+});
+
+blockText6.addEventListener("mouseleave", () => {
+    blockText6.style.transform = "translateX(-200px)";
+});
+
+
+
+
+/** GSAP Animation - Section 3 - Nouilles ---------------------------------------------- */
 
 
 let tl = gsap.timeline({
@@ -160,31 +224,31 @@ let tl = gsap.timeline({
     yoyo: true,
 });
 
-tl.to('.bowl', { x: 100, stagger: 0.1,})
-.to('.bowl', { x: 150, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 200, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 250, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 300, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 350, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 400, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 450, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 500, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 550, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 600, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 650, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 700, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 750, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 800, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 850, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 900, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 950, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 1000, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 1050, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 1100, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 1150, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 1200, y: 50, stagger: 0.1,})
-.to('.bowl', { x: 1250, y: -50, stagger: 0.1,})
-.to('.bowl', { x: 1300, y: 50, stagger: 0.1,})
+tl.to('.plate', { x: 100, stagger: 0.1,})
+.to('.plate', { x: 150, y: -50, stagger: 0.1,})
+.to('.plate', { x: 200, y: 50, stagger: 0.1,})
+.to('.plate', { x: 250, y: -50, stagger: 0.1,})
+.to('.plate', { x: 300, y: 50, stagger: 0.1,})
+.to('.plate', { x: 350, y: -50, stagger: 0.1,})
+.to('.plate', { x: 400, y: 50, stagger: 0.1,})
+.to('.plate', { x: 450, y: -50, stagger: 0.1,})
+.to('.plate', { x: 500, y: 50, stagger: 0.1,})
+.to('.plate', { x: 550, y: -50, stagger: 0.1,})
+.to('.plate', { x: 600, y: 50, stagger: 0.1,})
+.to('.plate', { x: 650, y: -50, stagger: 0.1,})
+.to('.plate', { x: 700, y: 50, stagger: 0.1,})
+.to('.plate', { x: 750, y: -50, stagger: 0.1,})
+.to('.plate', { x: 800, y: 50, stagger: 0.1,})
+.to('.plate', { x: 850, y: -50, stagger: 0.1,})
+.to('.plate', { x: 900, y: 50, stagger: 0.1,})
+.to('.plate', { x: 950, y: -50, stagger: 0.1,})
+.to('.plate', { x: 1000, y: 50, stagger: 0.1,})
+.to('.plate', { x: 1050, y: -50, stagger: 0.1,})
+.to('.plate', { x: 1100, y: 50, stagger: 0.1,})
+.to('.plate', { x: 1150, y: -50, stagger: 0.1,})
+.to('.plate', { x: 1200, y: 50, stagger: 0.1,})
+.to('.plate', { x: 1250, y: -50, stagger: 0.1,})
+.to('.plate', { x: 1300, y: 50, stagger: 0.1,})
 
 /** GSAP Animation - Section 4 - Draggable ---------------------------------------------- */
 
