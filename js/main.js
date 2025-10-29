@@ -220,35 +220,32 @@ let tl = gsap.timeline({
         scrub: 1,
     }
     */
-    repeat: 1,
-    yoyo: true,
+    repeat: 0,
+    yoyo: false,
 });
 
-tl.to('.plate', { x: 100, stagger: 0.1,})
-.to('.plate', { x: 150, y: -50, stagger: 0.1,})
-.to('.plate', { x: 200, y: 50, stagger: 0.1,})
-.to('.plate', { x: 250, y: -50, stagger: 0.1,})
-.to('.plate', { x: 300, y: 50, stagger: 0.1,})
-.to('.plate', { x: 350, y: -50, stagger: 0.1,})
-.to('.plate', { x: 400, y: 50, stagger: 0.1,})
-.to('.plate', { x: 450, y: -50, stagger: 0.1,})
-.to('.plate', { x: 500, y: 50, stagger: 0.1,})
-.to('.plate', { x: 550, y: -50, stagger: 0.1,})
-.to('.plate', { x: 600, y: 50, stagger: 0.1,})
-.to('.plate', { x: 650, y: -50, stagger: 0.1,})
-.to('.plate', { x: 700, y: 50, stagger: 0.1,})
-.to('.plate', { x: 750, y: -50, stagger: 0.1,})
-.to('.plate', { x: 800, y: 50, stagger: 0.1,})
-.to('.plate', { x: 850, y: -50, stagger: 0.1,})
-.to('.plate', { x: 900, y: 50, stagger: 0.1,})
-.to('.plate', { x: 950, y: -50, stagger: 0.1,})
-.to('.plate', { x: 1000, y: 50, stagger: 0.1,})
-.to('.plate', { x: 1050, y: -50, stagger: 0.1,})
-.to('.plate', { x: 1100, y: 50, stagger: 0.1,})
-.to('.plate', { x: 1150, y: -50, stagger: 0.1,})
-.to('.plate', { x: 1200, y: 50, stagger: 0.1,})
-.to('.plate', { x: 1250, y: -50, stagger: 0.1,})
-.to('.plate', { x: 1300, y: 50, stagger: 0.1,})
+/*
+let lt = new TimelineMax({
+  paused:true
+});
+
+// letter animation
+lt.fromTo(".s3text", 20, { // Le X est la vitesse d'apparition des mots
+  width: "0",
+}, {
+  width: "1000px", // Largeur du bloc
+  ease:  SteppedEase.config(50) //Fluidité du tappage de lettre
+}, 0);
+
+lt.play()
+*/
+
+
+tl.to('#plate1', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate2', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate3', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate4', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate5', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
 
 /** GSAP Animation - Section 4 - Draggable ---------------------------------------------- */
 

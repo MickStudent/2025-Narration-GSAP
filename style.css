@@ -267,52 +267,105 @@ header {
 
 #section3 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 
+    background-image: url(assets/img/section3.png);
+    background-position: center center;
+    background-size: cover;
     background-color: rgb(181, 58, 58);
+}
+
+/* Section 3 - s3title */
+
+#s3title {
+    padding-top: 80px;
 }
 
 #s3h2 {
     font-size: 40px;
 }
 
-
-#s2title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #s3logo {
     width: 200px;
 }
 
+/* Section 3 - s3divBowls */
+
+#s3divBowls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding-top: 50px;
+}
+
+#s3divR,
+#s3divL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#s3divBowlsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 1;
+}
+
+.s3textContainerL {
+    width: 200px;
+    height: 200px;
+
+
+    overflow: hidden;
+
+    transform: translateX(-190px);
+
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.s3textContainerR {
+    width: 200px;
+    height: 200px;
+
+    overflow: hidden;
+
+    transform: translateX(190px);
+
+    align-items: flex-end;
+    flex-direction: column;
+}
+
 .plate {
     width: 200px;
+
+
 }
 
 #plate1 {
     width: 200px;
-    animation: AnimationBols 1s linear 1;
-    transition: 1s ease;
+
+    /*animation: AnimationBols 1s linear 1;
+    transition: 1s ease;*/
 }
 
 
-.bowl {
-    width: 100px;
-    height: 100px;
-
-    background-color: blue;
-
-    margin: 10px;
+.s3text {
+    /*padding-right: 400px;*/
 }
 
 /* Section 4 ----------------------------- */
 
 #section4 {
-    background-color: #58185b;
+    background-color: rgb(225, 208, 174);
 }
 
 #depositZone {
@@ -333,7 +386,7 @@ header {
 /* Section 5 ----------------------------- */
 
 #section5 {
-    background-color: #307213;
+    background-color: rgb(112, 71, 71);
 }
 
 
@@ -401,18 +454,10 @@ header {
     0% {
         opacity: 0;
         transform: translateY(50px);
-        /* commence plus bas */
-    }
-
-    50% {
-        opacity: 1;
-        /* devient visible */
-        transform: translateY(0);
-        /* arrive à sa position normale */
     }
 
     100% {
-        transform: translateX(-300px);
-        /* se déplace ensuite à droite */
+        opacity: 1;
+        transform: translateX(-500px);
     }
 }
