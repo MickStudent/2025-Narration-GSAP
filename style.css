@@ -365,8 +365,47 @@ header {
 /* Section 4 ----------------------------- */
 
 #section4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
     background-color: rgb(225, 208, 174);
 }
+
+/* Section 4 - s4title */
+
+#s4title {
+    padding-top: 80px;
+}
+
+#s4h2 {
+    font-size: 40px;
+}
+
+#s4logo {
+    width: 200px;
+}
+
+/* Section 4 - planDeTravail */
+
+#planDeTravail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100vw;
+}
+
+#pdt_div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
 
 #depositZone {
     width: 300px;
@@ -380,6 +419,50 @@ header {
     height: 300px;
 
     background-color: #307213;
+}
+
+#plancha1,
+#plancha2 {
+    background-image: url(assets/img/plancha.png);
+    background-position: center;
+    background-size: cover;
+
+    width: 200px;
+    height: 800px;
+
+    z-index: 2;
+}
+
+/* Section 4 - Images */
+
+#emptyBowl {
+    width: 200px;
+}
+
+#fullBowl {
+    width: 200px;
+    opacity: 0;
+}
+
+
+.s4_pdt_img {
+    width: 150px;
+
+    filter: drop-shadow(0px 20px 30px black);
+}
+
+#ingredient1,
+#ingredient2,
+#ingredient3,
+#ingredient4 {
+    transform: translate(20px, 100px);
+
+}
+
+#ingredient5,
+#ingredient6,
+#ingredient7 {
+    transform: translate(25px, 150px);
 }
 
 

@@ -224,23 +224,6 @@ let tl = gsap.timeline({
     yoyo: false,
 });
 
-/*
-let lt = new TimelineMax({
-  paused:true
-});
-
-// letter animation
-lt.fromTo(".s3text", 20, { // Le X est la vitesse d'apparition des mots
-  width: "0",
-}, {
-  width: "1000px", // Largeur du bloc
-  ease:  SteppedEase.config(50) //Fluidité du tappage de lettre
-}, 0);
-
-lt.play()
-*/
-
-
 tl.to('#plate1', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
 .to('#plate2', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
 .to('#plate3', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
@@ -256,7 +239,7 @@ Draggable.create("#drag", {
 
     onDrag: function(){
         gsap.to("#drag", {
-            witdh: '400px',
+            width: '400px',
             filter: 'drop-shadow(30px 10px 4px rgba(0,0,0,0.4))',
             duration: 0.25,
         })
@@ -264,8 +247,8 @@ Draggable.create("#drag", {
 
     onDragEnd: function(){
         gsap.to("#depositZone", {
-            witdh: '100px',
-            filter: 'drop-shadow()30px 10px 4px rgba(0,0,0,0))',
+            width: '100px',
+            filter: 'drop-shadow(30px 10px 4px rgba(0,0,0,0))',
             duration: 0.25,
         })
 
@@ -277,4 +260,59 @@ Draggable.create("#drag", {
         }
     },
 })
+
+const ingredients = document.querySelectorAll(".s4_pdt_img"); // Le querySelectorAll me permet de sélectionner dans mon HTML tous les objets de la même classe
+const fullBowl = document.querySelector("#fullBowl"); // Ici, je sélectionne l'id="#fullBowl"
+let addedCount = 0; // ici on l'initialise à 0
+
+ingredients.forEach((ingredient) => {   // Vidéo de BroCode (Youtube), "JavaScript forEach()". Pour comprendre comment fonctione forEach
+                                        // Pour chaque élément(ingredient) qui a la class s4_pdt_img et dans la parenthèse on met le nom qu'on veut, ici je l'ai appelé "ingredient"
+                                        // La fonction fléchée va me permettre d'exécuter chaque élément à chaque fois 
+
+    Draggable.create(ingredient, {
+        type: "x,y",
+        bounds: "#section4",
+        cursor: 'grab',
+
+        onDrag: function(){
+            gsap.to(ingredient,{
+                filter: 'drop-shadow(30px 10px 4px rgba(0,0,0,0.4))',
+                duration: 0.25,
+            })
+        },
+
+        onDragEnd: function(){
+            if(this.hitTest("#emptyBowl", "40px")){ // enlevant le if l'élément disparaîssait sans que j'ai besoin de le poser dans le bol
+                gsap.fromTo("#emptyBowl",
+                    { scale: 1 },
+                    { scale: 1.15, duration: 0.3, yoyo: true, repeat: 1 }
+                );
+
+                gsap.to(ingredient,{
+                    opacity: 0, 
+                    scale: 0,
+                    duration: 0.5,
+                });
+
+                addedCount += 1; // On ajoute +1 à chaque fois qu'un ingrédient rentre dans le bol afin que le compteur fonctionne
+                console.log("Ingrédients ajoutés :", addedCount);
+
+                if (addedCount === ingredients.length) { // Lorsque la valeur et la nature sont égales et length compte le nombre d'éléments. (appris sur Notion avec les formules pour les databases), ici il compte combien il y a d'ingrédient dans la variable "ingredients"
+                    console.log("Tous les ingrédients sont ajoutés !");
+
+                    gsap.to('#emptyBowl', { 
+                        opacity: 0, 
+                        duration: 0.5 
+                    });
+
+                    gsap.fromTo(fullBowl,
+                        { opacity: 0, scale: 0.8 },
+                        { opacity: 1, scale: 1, duration: 1}
+                    );
+                }
+            }
+        },
+    });
+});
+
 
