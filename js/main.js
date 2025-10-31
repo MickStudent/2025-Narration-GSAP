@@ -209,26 +209,23 @@ blockText6.addEventListener("mouseleave", () => {
 
 
 let tl = gsap.timeline({
-    /*
     scrollTrigger:{
         trigger:"#section3",
         markers:true,
-        start: "top 60%",
-        end: "top 20%",
+        start: "top 25%",
+        end: "bottom center",
         id: "zone-section3",
-        toggleActions : "play none reverse reset",
-        scrub: 1,
+        toggleActions : "play none none reset",
+     
     }
-    */
-    repeat: 0,
-    yoyo: false,
+
 });
 
-tl.to('#plate1', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-.to('#plate2', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-.to('#plate3', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-.to('#plate4', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-.to('#plate5', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+    tl.to('#plate1', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+    .to('#plate2', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+    .to('#plate3', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+    .to('#plate4', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+    .to('#plate5', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
 
 /** GSAP Animation - Section 4 - Draggable ---------------------------------------------- */
 
