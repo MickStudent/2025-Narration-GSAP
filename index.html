@@ -16,34 +16,25 @@
 <body>
     
     <header class="dFlexCenter">
+        <label for="switch">☰</label> <!-- Code que j'ai repris de la B1-->
+        <input id="switch" type="checkbox"> <!-- Code que j'ai repris de la B1-->
         <nav> <!-- Code que j'ai repris de la B1-->
             <ul id="menuBar">
                 <li>
-                    <a class="menuItem" href="#section1">Section</a>
+                    <a class="menuItem" href="#section1">Accueil</a>
                 </li>
                 <li>
-                    <a class="menuItem" href="#section2">Section</a>
+                    <a class="menuItem" href="#section2">Régions</a>
                 </li>
                 <li>
-                    <a class="menuItem" href="#section3">Section</a>
+                    <a class="menuItem" href="#section3">Bols</a>
                 </li>
                 <li>
-                    <a class="menuItem" href="#section4">Section</a>
-                </li>
-                <li>
-                    <a class="menuItem" href="#section5">Section</a>
+                    <a class="menuItem" href="#section4">Recette</a>
                 </li>
             </ul>
         </nav>
 
-        <!--
-        <div id="menuBar">
-            <p class="bar">Section 1</p>
-            <p class="bar">Section 2</p>
-            <p class="bar">Section 3</p>
-            <p class="bar">Section 4</p>
-            <p class="bar">Section 5</p> -->
-        </div>
     </header>
 
     <!-- Popup ----------------------------------------------------------- -->
@@ -57,7 +48,7 @@
     <section id="section1" class="h100">
         <img id="logo" src="assets/img/logo.png" alt="Logo NOOODLES">
         <div id="divL" class="dFlexCenter h100">
-            <p>Nées dans les ruelles d’Asie, façonnées à la main,<br>
+            <p id="s1text">Nées dans les ruelles d’Asie, façonnées à la main,<br>
                 les nouilles chinoises ont voyagé à travers le temps, les peuples et les bols.<br><br>
 
                 De la farine et de l’eau, simples mais puissantes, elles sont devenues le cœur d’une cuisine vivante.<br><br>
@@ -110,7 +101,7 @@
         </div>
 
         <div id="s2divM">
-            <h2 id="s2h2">Spécialités</h2>
+            <h2 id="s2h2">Régions</h2>
             <img id="china" src="assets/img/china.png" alt="Pays Chine">
         </div>
 
@@ -165,16 +156,16 @@
 
                 <div id="s3blockTextsL">
                     <div class="s3textContainerL dFlexCenter">
-                        <h3>Bol de ...</h3>
-                        <p class="s3text">Blablablablablablablablablablablablabla</p>
+                        <h3>炒面 – Nouilles sautées aux crevettes et légumes</h3>
+                        <p class="s3text">C’est un classique des nouilles sautées cantonaises, légèrement sucrées-salées, avec une texture moelleuse.</p>
                     </div>
                     <div class="s3textContainerL dFlexCenter">
-                        <h3>Bol de ...</h3>
-                        <p class="s3text">Blablablablablablablablablablablablabla</p>
+                        <h3>红烧牛肉面 – Soupe de nouilles au bœuf braisé</h3>
+                        <p class="s3text">Un plat emblématique de Taïwan et du Sichuan, réconfortant, riche et aromatique.</p>
                     </div>
                     <div class="s3textContainerL dFlexCenter">
-                        <h3>Bol de ...</h3>
-                        <p class="s3text">Blablablablablablablablablablablablabla</p>
+                        <h3>家常炒面 – Nouilles sautées maison</h3>
+                        <p class="s3text">Une version “familiale” des nouilles sautées, inspirée de la cuisine de rue.</p>
                     </div>
                 </div>
 
@@ -195,12 +186,12 @@
 
                 <div id="s3blockTextsR">
                     <div class="s3textContainerR dFlexCenter">
-                        <h3>Bol de ...</h3>
-                        <p class="s3text">Blablablablablablablablablablablablabla</p>
+                        <h3>牛肉炒面 (Niúròu Chǎo Miàn) – Nouilles sautées au bœuf et poivrons</h3>
+                        <p class="s3text">Un plat plus relevé, souvent inspiré de la cuisine du nord de la Chine.</p>
                     </div>
                     <div class="s3textContainerR dFlexCenter">
-                        <h3>Bol de ...</h3>
-                        <p class="s3text">Blablablablablablablablablablablablabla</p>
+                        <h3>荞麦冷面 – Nouilles de sarrasin froides</h3>
+                        <p class="s3text">Un plat léger et rafraîchissant, souvent servi froid avec une sauce soja vinaigrée.</p>
                     </div>
                 </div>
 
@@ -226,7 +217,7 @@
         </div>
 
         <div id="planDeTravail">
-            <div id="plancha1">
+            <div id="plancha1" class="dFlexCenter">
                 <img id="ingredient1" class="s4_pdt_img" src="assets/img/water.png" alt="Eau">
                 <img id="ingredient2" class="s4_pdt_img" src="assets/img/oil.png" alt="Huile">
                 <img id="ingredient3" class="s4_pdt_img" src="assets/img/salt.png" alt="Sel">
@@ -239,7 +230,7 @@
                 <img id="fullBowl" src="assets/img/bowl.png" alt="Bol plein">
             </div>
 
-            <div id="plancha2">
+            <div id="plancha2" class="dFlexCenter">
                 <img id="ingredient5" class="s4_pdt_img" src="assets/img/onion.png" alt="Ciboule">
                 <img id="ingredient6" class="s4_pdt_img" src="assets/img/spicy.png" alt="Piments séchés">
                 <img id="ingredient7" class="s4_pdt_img" src="assets/img/garlic.png" alt="Ail">
@@ -251,9 +242,9 @@
 
     </section>
 
-    <!-- Section 5 ----------------------------------------- -->
+    <!-- Section 5 ----------------------------------------- 
 
-    <section id="section5" class="dFlexCenter h100"></section>
+    <section id="section5" class="dFlexCenter h100"></section> -->
 
     <!-- GSAP Scripts ---------------------------------------------------- -->
     <script src="js/GSAP/gsap.min.js"></script>

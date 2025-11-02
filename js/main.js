@@ -2,68 +2,6 @@
 gsap.registerPlugin(ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin);
 
 /** GSAP Animation - Section 1 - Nouilles */
-/* gsap.to("#nouilles", {
-    x: 400,
-    rotation: 360,
-
-    duration: 1,
-})
-
-gsap.to("#nouilles", {
-    x: -100,
-    rotation: -360,
-
-    delay:2,
-    duration: 1,
-})
-
-gsap.to("#nouilles", {
-    x: 0,
-    rotation: 360,
-
-    delay:3,
-    duration: 1,
-}) */
-
-/*
-gsap.to("#nouilles", {
-    ScrollTrigger: {
-        trigger: '#section2',s
-        start: 'top 60%',
-        end: 'top 20%',
-        scrub: 1,
-        markers: true,
-        id:"window2"
-        toggleActions: 'play none reverse reset',
-    },
-    rotation: 360,
-    duration: 2,
-})*/
-
-/*
-function demarageJeu() {
-    document.getElementById('popup').classList.add('hide');
-    announce("Un ennemi approche...");
-    setTimeout( // Pour faire apparaître la popup automatiquement après la "popupIntro"
-        document.getElementById("popup").style.display = "flex", // Popup qui apparaît après la "popupIntro" pour choisir notre personnage 
-    1000);  
-    setTimeout(() => { // C'est une fonction fléchée, une fonction qui ne marche que dans ce cas précis
-        announce("Choisissez votre attaque !");
-    }, 3000);
-}
-*/
-
-
-/** GSAP Animation - Popup - Nouilles */
-
-gsap.to('#popup', {
-    opacity: 100,
-})
-
-gsap.to('#popup', {
-    opacity: 0,
-    duration: 1.5,
-})
 
 /** GSAP Animation - Section 1 - Logo (ScrollTrigger)  */
 
@@ -221,11 +159,11 @@ let tl = gsap.timeline({
 
 });
 
-    tl.to('#plate1', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-    .to('#plate2', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-    .to('#plate3', { x: -600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-    .to('#plate4', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
-    .to('#plate5', { x: 600, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+tl.to('#plate1', { x: -650, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate2', { x: -650, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate3', { x: -650, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate4', { x: 650, y: 0, rotate: 360, duration: 1, stagger: 0.1,})
+.to('#plate5', { x: 650, y: 0, rotate: 360, duration: 1, stagger: 0.1,}) 
 
 /** GSAP Animation - Section 4 - Draggable ---------------------------------------------- */
 
@@ -312,4 +250,16 @@ ingredients.forEach((ingredient) => {   // Vidéo de BroCode (Youtube), "JavaScr
     });
 });
 
+/** GSAP Responsive ---------------------------------------------- */
 
+let mm = gsap.matchMedia();
+
+mm.add({
+  isMobile: "(max-width: 800px)",
+  isDesktop: "(mix-width: 801px)",
+}, (context) =>{
+    let{ isMobile, isDesktop} = context.conditions;
+
+    
+
+})

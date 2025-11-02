@@ -3,6 +3,8 @@
     margin: 0px;
     padding: 0px;
 
+    font-family: "Raleway", sans-serif;
+
     cursor: url(assets/icon/chopsticks.png), default;
 }
 
@@ -22,14 +24,14 @@ p {
 /* Variables -------------------------------------- */
 
 
-/* Fonts ------------------------------------------
+/* Fonts ------------------------------------------ */
 
+.raleway {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-
-*/
+}
 
 /* Components --------------------------------------*/
 
@@ -58,6 +60,11 @@ header {
     z-index: 10;
 }
 
+header label,
+header #switch {
+    display: none;
+}
+
 #menuBar {
     width: 40%;
 
@@ -73,6 +80,8 @@ header nav ul li {
 }
 
 .menuItem {
+    display: inline-block;
+    /* Va me permettre au lien <a> qui est un élément inline, de recevoir un scale par exemple*/
     text-decoration: none;
     padding: 12px 25px;
     color: black;
@@ -80,8 +89,13 @@ header nav ul li {
     border-radius: 20px;
 
     font-size: 16px;
+
+    transition: 0.25s;
 }
 
+.menuItem:hover {
+    transform: scale(1.1);
+}
 
 /*
 #popup {
@@ -124,7 +138,6 @@ header nav ul li {
     background-position: center;
     background-size: contain;
 
-    background-color: rgb(167, 97, 97);
     width: 60%;
 }
 
@@ -286,7 +299,7 @@ header nav ul li {
     background-color: rgb(181, 58, 58);
 }
 
-/* Section 3 - s3title */
+/* Section 3 - s3title & Text */
 
 #s3title {
     padding-top: 80px;
@@ -299,6 +312,14 @@ header nav ul li {
 #s3logo {
     width: 200px;
 }
+
+.s3text {
+    display: flex;
+    align-items: flex-end;
+
+    font-size: 16px;
+}
+
 
 /* Section 3 - s3divBowls */
 
@@ -329,56 +350,51 @@ header nav ul li {
 }
 
 .s3textContainerL {
-    width: 200px;
+    width: 400px;
     height: 200px;
-
 
     overflow: hidden;
 
-    transform: translateX(-190px);
+    transform: translateX(-50px);
 
     align-items: flex-start;
     flex-direction: column;
 }
 
 .s3textContainerR {
-    width: 200px;
+    width: 400px;
     height: 200px;
 
     overflow: hidden;
 
-    transform: translateX(190px);
+    transform: translateX(50px);
 
     align-items: flex-end;
     flex-direction: column;
+
+    text-align: end;
+    /* Pour aligner le texte à la fin */
 }
 
 .plate {
     width: 200px;
-
-
 }
 
 #plate1 {
     width: 200px;
-
-    /*animation: AnimationBols 1s linear 1;
-    transition: 1s ease;*/
-}
-
-
-.s3text {
-    /*padding-right: 400px;*/
 }
 
 /* Section 4 ----------------------------- */
 
 #section4 {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 
+    background-image: url(assets/img/s4_bg.png);
+    background-position: center;
+    background-size: cover;
     background-color: rgb(225, 208, 174);
 }
 
@@ -415,29 +431,15 @@ header nav ul li {
     margin: 20px;
 }
 
-
-#depositZone {
-    width: 300px;
-    height: 300px;
-
-    border: 4px dotted black;
-}
-
-#depositZone--validate {
-    width: 300px;
-    height: 300px;
-
-    background-color: #307213;
-}
-
 #plancha1,
 #plancha2 {
-    background-image: url(assets/img/plancha.png);
-    background-position: center;
-    background-size: cover;
+    flex-direction: column;
+
+    border-radius: 50px;
+    background-color: rgb(235, 191, 55, 1);
 
     width: 200px;
-    height: 800px;
+    height: 700px;
 
     z-index: 2;
 }
@@ -453,46 +455,17 @@ header nav ul li {
     opacity: 0;
 }
 
-
 .s4_pdt_img {
     width: 150px;
 
-    filter: drop-shadow(0px 20px 30px black);
+    filter: drop-shadow(0px 20px 30px rgb(94, 93, 93, 0.5));
 }
-
-#ingredient1,
-#ingredient2,
-#ingredient3,
-#ingredient4 {
-    transform: translate(20px, 100px);
-
-}
-
-#ingredient5,
-#ingredient6,
-#ingredient7 {
-    transform: translate(25px, 150px);
-}
-
 
 /* Section 5 ----------------------------- */
 
 #section5 {
     background-color: rgb(112, 71, 71);
 }
-
-
-#drag {
-    width: 200px;
-    height: 200px;
-    background-color: blue;
-}
-
-/* Responsive ------------------------------------- */
-
-/* Media Queries ----------------- */
-
-@media (max-width: 799px) {}
 
 /* Animations ------------------------------------- */
 
@@ -542,14 +515,68 @@ header nav ul li {
     }
 }
 
-@keyframes AnimationBols {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
+/* Mobile Design --------------------------------------------------- */
+
+@media (max-width:800px) {
+
+    /* Mobile Header ----------------------------------------------- */
+
+    header {
+        display: block;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(-500px);
+    header label {
+        display: block;
+        /* block â‰  none */
+        font-size: 30px;
+
+        color: rgb(235, 191, 55, 1)
     }
+
+    header nav {
+        display: none;
+        clear: both;
+    }
+
+    #switch:checked+nav {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        border-top: solid 1px black;
+        transform: translateY(120px);
+    }
+
+    header nav ul li {
+        text-align: center;
+        width: 100%;
+        border-bottom: solid 1px black;
+
+    }
+
+    #section1 {
+        background-image: none;
+        background-color: rgb(205, 103, 102);
+    }
+
+    #divL {
+        background-image: none;
+    }
+
+    #s1text {
+        padding-left: 60px;
+    }
+
+    #section2 {}
+
+    #s2divM {}
+
+    #china {
+        width: 100%;
+        height: 100%;
+    }
+
+
 }
